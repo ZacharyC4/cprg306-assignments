@@ -49,9 +49,10 @@ export default function NewItem()
  let incrementStyle = "bg-emerald-400 rounded-lg w-8 hover:bg-emerald-600 text-black font-bold";
  let decrementStyle = "bg-emerald-400 rounded-lg w-8 hover:bg-emerald-600 ml-2 text-black font-bold";
  let endStyle = "bg-gray-600 rounded-lg w-8 ml-2 cursor-not-allowed";
+ let endStyle2 = "bg-gray-600 rounded-lg w-8 cursor-not-allowed"; 
     if (quantity >= 20)
     {
-        incrementStyle = endStyle;
+        incrementStyle = endStyle2;
     }
     if (quantity <= 1)
     {
@@ -59,7 +60,7 @@ export default function NewItem()
     }
 
     return(
-        <main className="flex justify-center w-full">
+        <main className="pl-8 mb-4">
             <form className="p-4 border border-emerald-600 bg-gray-900 w-80"  onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label className="inline-block"></label>
@@ -72,7 +73,7 @@ export default function NewItem()
                     />
                 </div>
 
-                <div className="bg-gray-800 w-28 p-2 my-3 border-emerald-500 border rounded-lg flex justify-between">
+                <div className="bg-gray-800 p-2 my-3 border-emerald-500 border rounded-lg flex justify-between w-32">
                     <div className="flex mr-12">
                         <h1>{quantity}</h1>
                         <div className="flex ml-3">
